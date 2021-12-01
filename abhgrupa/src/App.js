@@ -1,10 +1,18 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
-function App() {
+const App =() => {
   return (
-    <div className="App">
-      Działa
-    </div>
+    <>
+      <Router>
+        <Navbar>
+          <Routes>
+            <Route exact path='/' />
+          </Routes>
+        </Navbar>
+      </Router>
+    </>
   );
 }
 
